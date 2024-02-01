@@ -38,7 +38,7 @@
                 src="./img/avatar_io.jpg"
                 alt="user"
               />
-              <span class="user-name">Sofia</span>
+              <span class="user-name fw-bold">Sofia</span>
             </div>
             <div class="receive-messages">
               <div class="bell-cont">
@@ -68,15 +68,34 @@
             </div>
             <section class="chat-users-section">
               <div v-for="contact in contacts" class="box-chat">
-                <img :src="contact.avatar" alt="" class="profile-img" />
-                {{contact.name}}
-                <div>ultimo messaggio inviato</div>
+                <div class="">
+                  <img :src="contact.avatar" alt="" class="profile-img" />
+                </div>
+                <div>
+                  <div class="fw-bold">{{contact.name}}</div>
+                  <div>ultimo messaggio inviato</div>
+                </div>
               </div>
             </section>
           </div>
 
           <div class="second-column">
-            <div class="chat-person"></div>
+            <div class="chat-person">
+              <div class="on-chat-image">
+                <div>
+                  <img src="./img/avatar_1.jpg" alt="" class="profile-img" />
+                </div>
+                <div>
+                  <div class="fw-bold">Michele</div>
+                  <div>ultimo accesso oggi alle 12:00</div>
+                </div>
+              </div>
+              <div class="icons-cont">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-paperclip"></i>
+                <i class="fas fa-ellipsis-v"></i>
+              </div>
+            </div>
             <section class="on-screen-chat"></section>
             <section class="message-bar">
               <div class="emoji">

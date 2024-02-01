@@ -87,6 +87,7 @@ body {
   width: 100%;
   height: 60px;
   padding: 10px;
+  display: flex;
   border-bottom: 1px solid rgb(185, 182, 182);
 }
 
@@ -99,8 +100,41 @@ body {
 .chat-person {
   width: 100%;
   height: 55px;
+  display: flex;
+  justify-content: space-between;
   background-color: rgb(243, 232, 232);
   border-left: 1px solid rgb(196, 189, 189);
+}
+
+.on-chat-image .icons-cont {
+  height: 100%;
+  width: 20%;
+}
+
+.on-chat-image {
+  display: flex;
+}
+
+.icons-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.fa-search {
+  color: rgb(155, 151, 151);
+  margin-right: 10px;
+}
+
+.fa-paperclip {
+  color: rgb(155, 151, 151);
+  margin-right: 10px;
+}
+
+.fa-ellipsis-v {
+  color: rgb(155, 151, 151);
+  margin-right: 10px;
 }
 
 .on-screen-chat {
