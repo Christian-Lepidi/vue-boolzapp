@@ -22,7 +22,6 @@ body {
 .first-column {
   height: 100%;
   width: 30%;
-  background-color: lightblue;
 }
 
 .user-cont {
@@ -35,29 +34,42 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  margin-right: 3px;
+}
+
+.user-name {
+  font-size: 22px;
 }
 
 .receive-messages {
   width: 100%;
   height: 70px;
   background-color: rgb(170, 245, 245);
+  display: flex;
+}
+
+.bell-cont {
+  width: 20%;
+  height: 100%;
+}
+
+.text-cont {
+  width: 80%;
+  height: 100%;
 }
 
 .fa-bell-slash {
   margin-top: 20px;
   margin-left: 10px;
   background-color: white;
-  padding: 7px;
+  padding: 5px;
   border-radius: 50%;
   color: rgb(170, 245, 245);
+  float: left;
 }
 
-.note {
-  margin-top: -10px;
-}
-
-.user-name {
-  font-size: 22px;
+.notification-active {
+  color: rgb(154, 150, 150);
 }
 
 .search-bar {
@@ -69,7 +81,16 @@ body {
 .chat-users-section {
   width: 100%;
   height: calc(100% - 175px);
-  background-color: aquamarine;
+}
+
+.box-chat {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgb(185, 182, 182);
 }
 
 /*SECOND COLUMN*/

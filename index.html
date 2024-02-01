@@ -41,9 +41,16 @@
               <span class="user-name">Sofia</span>
             </div>
             <div class="receive-messages">
-              <i class="fas fa-bell-slash fa-2x"></i>
-              <span class="note">Ricevi notifiche di nuovi messaggi</span>
-              <a href="#">attiva notifiche desktop</a>
+              <div class="bell-cont">
+                <i class="fas fa-bell-slash fa-2x"></i>
+              </div>
+              <div class="text-cont">
+                <span class="note">Ricevi notifiche di nuovi messaggi</span
+                ><br />
+                <a href="#" class="notification-active"
+                  >attiva notifiche desktop</a
+                >
+              </div>
             </div>
             <div class="search-bar">
               <div class="input-group py-1">
@@ -59,7 +66,13 @@
                 />
               </div>
             </div>
-            <section class="chat-users-section"></section>
+            <section class="chat-users-section">
+              <div v-for="contact in contacts" class="box-chat">
+                <img :src="contact.avatar" alt="" class="profile-img" />
+                {{contact.name}}<br />
+                <div>ultimo messaggio inviato</div>
+              </div>
+            </section>
           </div>
 
           <div class="second-column">
