@@ -31,13 +31,60 @@
     <div id="app">
       <div class="general-container">
         <div class="wrapper">
-          <!--Head-bar-->
-          <div class="head-bar">
-            <div class="user-cont"></div>
-            <div class="chat-person-cont"></div>
+          <div class="first-column">
+            <div class="user-cont">
+              <img
+                class="profile-img m-1"
+                src="./img/avatar_io.jpg"
+                alt="user"
+              />
+              <span class="user-name">Sofia</span>
+            </div>
+            <div class="receive-messages">
+              <i class="fas fa-bell-slash fa-2x"></i>
+              <span class="note">Ricevi notifiche di nuovi messaggi</span>
+              <a href="#">attiva notifiche desktop</a>
+            </div>
+            <div class="search-bar">
+              <div class="input-group py-1">
+                <span class="input-group-text" id="basic-addon1"
+                  ><i class="fas fa-search"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Cerca o inizia una nuova chat"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+            </div>
+            <section class="chat-users-section"></section>
           </div>
 
-          <div class="receive-messages"></div>
+          <div class="second-column">
+            <div class="chat-person"></div>
+            <section class="on-screen-chat"></section>
+            <section class="message-bar">
+              <div class="emoji">
+                <i class="fas fa-smile"></i>
+              </div>
+              <div class="direct-message">
+                <div class="input-group flex-nowrap">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Scrivi un messaggio"
+                    aria-label="Username"
+                    aria-describedby="addon-wrapping"
+                  />
+                </div>
+              </div>
+              <div class="vocal">
+                <i class="fas fa-microphone"></i>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>
