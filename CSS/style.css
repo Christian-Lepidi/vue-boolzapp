@@ -9,6 +9,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    #009688 0vh,
+    #009688 15vh,
+    #d2dbdc 15vh,
+    #d2dbdc 100vh
+  );
 }
 
 .wrapper {
@@ -141,6 +148,20 @@ body {
   width: 100%;
   height: calc(100% - 110px);
   background-image: url(../img/mine.jpg);
+}
+
+.sent {
+  max-width: 90px;
+  max-height: 50px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.received {
+  max-width: 90px;
+  max-height: 50px;
+  background-color: lightgreen;
+  border-radius: 15px;
 }
 
 .message-bar {
