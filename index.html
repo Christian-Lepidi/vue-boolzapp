@@ -69,7 +69,7 @@
             <section class="chat-users-section">
               <div v-for="contact in contacts" class="box-chat">
                 <div class="">
-                  <img :src="contact.avatar" alt="" class="profile-img" />
+                  <img src="./img/avatar_1.jpg" alt="" class="profile-img" />
                 </div>
                 <div>
                   <div class="fw-bold">{{contact.name}}</div>
@@ -83,11 +83,19 @@
             <div class="chat-person">
               <div class="on-chat-image">
                 <div>
-                  <img src="./img/avatar_1.jpg" alt="" class="profile-img" />
+                  <img
+                    :src="contacts[activeIndex].avatar"
+                    alt=""
+                    class="profile-img"
+                  />
                 </div>
                 <div>
-                  <div class="fw-bold">Michele</div>
-                  <div>ultimo accesso oggi alle 12:00</div>
+                  <div class="fw-bold">{{contacts[activeIndex].name}}</div>
+                  <div>
+                    ultimo accesso {{
+                    contacts[activeIndex].messages[contacts[activeIndex].messages.length
+                    -1].date }}
+                  </div>
                 </div>
               </div>
               <div class="icons-cont">
@@ -97,10 +105,16 @@
               </div>
             </div>
             <section class="on-screen-chat">
-              <div class="received">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </div>
-              <div class="sent">Lorem ipsum dolor sit amet.</div>
+              <div
+                v-for="message in contacts[activeIndex].messages."
+                :class="received"
+                class="received"
+              ></div>
+              <div
+                v-for="message in contacts[activeIndex].messages"
+                :class="sent"
+                class="sent"
+              ></div>
             </section>
             <section class="message-bar">
               <div class="emoji">
