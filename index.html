@@ -68,8 +68,8 @@
             </div>
             <section class="chat-users-section">
               <div v-for="contact in contacts" class="box-chat">
-                <div class="">
-                  <img src="./img/avatar_1.jpg" alt="" class="profile-img" />
+                <div>
+                  <img :src="contacts.avatar" alt="" class="profile-img" />
                 </div>
                 <div>
                   <div class="fw-bold">{{contact.name}}</div>
@@ -83,11 +83,7 @@
             <div class="chat-person">
               <div class="on-chat-image">
                 <div>
-                  <img
-                    :src="contacts[activeIndex].avatar"
-                    alt=""
-                    class="profile-img"
-                  />
+                  <img src="./img/avatar_1.jpg" alt="" class="profile-img" />
                 </div>
                 <div>
                   <div class="fw-bold">{{contacts[activeIndex].name}}</div>
@@ -105,16 +101,8 @@
               </div>
             </div>
             <section class="on-screen-chat">
-              <div
-                v-for="message in contacts[activeIndex].messages."
-                :class="received"
-                class="received"
-              ></div>
-              <div
-                v-for="message in contacts[activeIndex].messages"
-                :class="sent"
-                class="sent"
-              ></div>
+              <div class="received"></div>
+              <div class="sent"></div>
             </section>
             <section class="message-bar">
               <div class="emoji">
