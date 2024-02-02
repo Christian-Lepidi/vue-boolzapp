@@ -69,7 +69,7 @@
             <section class="chat-users-section">
               <div v-for="contact in contacts" class="box-chat">
                 <div>
-                  <img :src="contacts.avatar" alt="" class="profile-img" />
+                  <img :src="contact.avatar" alt="" class="profile-img" />
                 </div>
                 <div>
                   <div class="fw-bold">{{contact.name}}</div>
@@ -105,8 +105,12 @@
               </div>
             </div>
             <section class="on-screen-chat">
-              <div class="received"></div>
-              <div class="sent"></div>
+              <div
+                v-for="message in contacts[activeIndex].messages"
+                :class="(message.status!='sent') ?'sent': 'received'"
+              >
+                {{message.message}}
+              </div>
             </section>
             <section class="message-bar">
               <div class="emoji">
