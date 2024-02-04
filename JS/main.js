@@ -169,4 +169,18 @@ createApp({
       activeIndex: 0,
     };
   },
+
+  methods: {
+    getLastMessage(messages) {
+      const sentMessage = messages.filter((message) => {
+        return message.status == "sent";
+      });
+      const lastMessage = sentMessage[sentMessage.length - 1];
+      return lastMessage.message;
+    },
+
+    setActiveContact(index) {
+      this.activeIndex = index;
+    },
+  },
 }).mount("#app");

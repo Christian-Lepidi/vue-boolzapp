@@ -67,13 +67,17 @@
               </div>
             </div>
             <section class="chat-users-section">
-              <div v-for="contact in contacts" class="box-chat">
+              <div
+                v-for="(contact,index) in contacts"
+                class="box-chat"
+                @click="setActiveContact(index)"
+              >
                 <div>
                   <img :src="contact.avatar" alt="" class="profile-img" />
                 </div>
                 <div>
                   <div class="fw-bold">{{contact.name}}</div>
-                  <div>ultimo messaggio inviato</div>
+                  <div>{{getLastMessage(contact.messages)}}</div>
                 </div>
               </div>
             </section>
