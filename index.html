@@ -123,6 +123,8 @@
               <div class="direct-message">
                 <div class="input-group flex-nowrap">
                   <input
+                    v-model="newMessage.message"
+                    @keyUp.enter="sendMessage()"
                     type="text"
                     class="form-control"
                     placeholder="Scrivi un messaggio"

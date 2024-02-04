@@ -167,6 +167,11 @@ createApp({
         },
       ],
       activeIndex: 0,
+      newMessage: {
+        date: "",
+        message: "",
+        status: "sent",
+      },
     };
   },
 
@@ -181,6 +186,11 @@ createApp({
 
     setActiveContact(index) {
       this.activeIndex = index;
+    },
+
+    sendMessage() {
+      const newMessage = { ...this.newMessage };
+      this.contacts[this.activeIndex].messages.push(newMessage);
     },
   },
 }).mount("#app");
